@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calendar Auto Refresh</title>
+</head>
+<body>
+    <h2>ปฏิทินของฉัน</h2>
+    
+    <iframe id="calendarFrame" 
+        src="https://calendar.google.com/calendar/embed?src=<iframe src="https://calendar.google.com/calendar/embed?src=66a98ad2339eb1561d2e8c215f7695f1ab559565feb0e70a32143660c4fe05b6%40group.calendar.google.com&ctz=Asia%2FBangkok" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>"
+        style="border: 0; width: 100%; height: 800px;">
+    </iframe>
+
+    <script>
+        setInterval(function() {
+            var frame = document.getElementById('calendarFrame');
+            frame.src = frame.src; // โหลดใหม่โดยไม่ต้องรีเฟรชหน้าเว็บ
+        }, 300000); // รีเฟรชทุก 1 นาที (600,000 มิลลิวินาที)
+    </script>
+</body>
+</html>
